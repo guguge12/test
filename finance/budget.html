@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>预算管理 - 金融数据中心</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="index.html" class="home-link">
+        <i class="fas fa-chevron-left"></i>
+        预算管理
+      </a>
+    </h1>
+  </header>
+
+  <main class="budget-main">
+    <div class="budget-overview">
+      <!-- 预算总览 -->
+      <div class="budget-summary">
+        <div class="summary-card total-budget">
+          <h3>月度总预算</h3>
+          <p class="amount">¥15,000.00</p>
+          <p class="progress">已使用 65%</p>
+        </div>
+        <div class="summary-card remaining-budget">
+          <h3>剩余预算</h3>
+          <p class="amount">¥5,250.00</p>
+          <p class="days-left">本月剩余 12 天</p>
+        </div>
+        <div class="summary-card daily-average">
+          <h3>日均支出</h3>
+          <p class="amount">¥325.00</p>
+          <p class="trend down">低于预期 8%</p>
+        </div>
+      </div>
+
+      <!-- 预算分类 -->
+      <div class="budget-categories">
+        <h2>预算分类</h2>
+        <div class="category-grid">
+          <div class="category-card">
+            <div class="category-header">
+              <i class="fas fa-utensils"></i>
+              <h3>餐饮</h3>
+            </div>
+            <div class="category-progress">
+              <div class="progress-bar" style="--progress: 75%"></div>
+            </div>
+            <div class="category-details">
+              <p class="spent">已用: ¥2,250 / ¥3,000</p>
+              <p class="remaining">剩余: ¥750</p>
+            </div>
+          </div>
+          <!-- 更多预算分类卡片 -->
+        </div>
+      </div>
+
+      <!-- 预算图表 -->
+      <div class="budget-charts">
+        <div class="chart-container" id="budgetTrendChart-container">
+          <h3>预算使用趋势</h3>
+          <canvas id="budgetTrendChart"></canvas>
+        </div>
+        <div class="chart-container" id="expenseDistributionChart-container">
+          <h3>支出分布</h3>
+          <canvas id="expenseDistributionChart"></canvas>
+        </div>
+      </div>
+
+      <!-- 最近交易 -->
+      <div class="recent-transactions">
+        <h2>最近交易</h2>
+        <div class="transaction-list">
+          <div class="transaction-item">
+            <div class="transaction-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="transaction-info">
+              <h4>超市购物</h4>
+              <p class="time">今天 14:30</p>
+            </div>
+            <div class="transaction-amount expense">
+              -¥258.50
+            </div>
+            <div class="transaction-category">
+              <span class="tag">日用品</span>
+            </div>
+          </div>
+          <!-- 更多交易记录 -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 金融数据中心 版权所有</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="budget.js"></script>
+</body>
+
+</html>
